@@ -73,7 +73,7 @@ class EntityRecognizer(object):
         '''
         if isinstance(stopwords, str):
             # stopwords is a path:
-            with open(stopwords) as f:
+            with open(stopwords, encoding='utf-8') as f:
                 stopwords = [l.strip() for l in f]
         # Any False-equivalent value is interpreted as no stopwords.
         stopwords = stopwords or []

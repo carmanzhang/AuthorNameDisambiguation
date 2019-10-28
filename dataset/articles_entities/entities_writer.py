@@ -52,7 +52,7 @@ def write(pmids):
         filename = str(pmid)+".entities"
 
         if not os.path.isfile(filename):
-            file = open(filename, 'w')
+            file = open(filename, 'w', encoding='utf-8')
             entities = UTILITY.get_entities_by_pmids([pmid])
 
             for i in range(len(entities)):

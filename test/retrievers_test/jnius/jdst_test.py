@@ -10,7 +10,7 @@ class TestJDSTRetriever(unittest.TestCase):
 
     @staticmethod
     def get_test_text():
-        file = open(PATH_TO_ARTICLES+'4622441.xml', 'r')
+        file = open(PATH_TO_ARTICLES+'4622441.xml', 'r', encoding='utf-8')
         article_content = file.read()
         file.close()
 

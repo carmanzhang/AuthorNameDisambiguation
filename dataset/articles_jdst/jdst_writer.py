@@ -37,7 +37,7 @@ def write_jdst():
         filename = pmid + '.jds'
 
         if not os.path.isfile(filename):
-            file = open(filename, 'w')
+            file = open(filename, 'w', encoding='utf-8')
 
             for jd in article.get_jds():
                 file.write(jd+'\n')
@@ -47,7 +47,7 @@ def write_jdst():
         filename = pmid + '.sts'
 
         if not os.path.isfile(filename):
-            file = open(filename, 'w')
+            file = open(filename, 'w', encoding='utf-8')
 
             for st in article.get_sts():
                 file.write(st+'\n')

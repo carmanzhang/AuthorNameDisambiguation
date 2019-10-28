@@ -420,7 +420,7 @@ class Router(object):
         except ParsePointerException as e:
             # Treat ids as a file name.
             # Open the file and try again.
-            with open(e.pointers) as f:
+            with open(e.pointers, encoding='utf-8') as f:
                 yield from self._parse_pointers(f)
 
     def _iter_subdirs(self, paths):

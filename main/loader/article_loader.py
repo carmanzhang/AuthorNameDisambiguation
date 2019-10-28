@@ -16,7 +16,7 @@ def load_article(pmid):
     """Given the PMID, creates and returns an article full of all its retrievable informations."""
 
     # Opening the file and reading the content
-    file = open(PATH_TO_ARTICLES+str(pmid)+'.xml', 'r')
+    file = open(PATH_TO_ARTICLES+str(pmid)+'.xml', 'r', encoding='utf-8')
     article_content = file.read()
     file.close()
 

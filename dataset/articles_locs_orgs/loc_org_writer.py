@@ -29,7 +29,7 @@ def write_loc_orgs():
         # Converting the pmid from number to string
         pmid = str(int(pmid))
 
-        article_file = open(definitions.PATH_TO_ARTICLES + pmid + '.xml', 'r')
+        article_file = open(definitions.PATH_TO_ARTICLES + pmid + '.xml', 'r', encoding='utf-8')
         article_content = article_file.read()
         article_file.close()
 
@@ -43,7 +43,7 @@ def write_loc_orgs():
             filename = pmid + '.loc'
 
             if not os.path.isfile(filename):
-                file = open(filename, 'w')
+                file = open(filename, 'w', encoding='utf-8')
                 for loc_info in location_list:
                     file.write(loc_info+'\n')
                 file.close()
@@ -53,7 +53,7 @@ def write_loc_orgs():
             filename = pmid + '.org'
 
             if not os.path.isfile(filename):
-                file = open(filename, 'w')
+                file = open(filename, 'w', encoding='utf-8')
                 for org_info in organization_list:
                     file.write(org_info+'\n')
                 file.close()

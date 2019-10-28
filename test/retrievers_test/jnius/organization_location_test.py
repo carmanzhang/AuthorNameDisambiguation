@@ -11,7 +11,7 @@ class OrganizationLocationTest(unittest.TestCase):
         """Tests that the organization infos are correctly retrieved"""
         pmid = 25582491
 
-        file = open(definitions.PATH_TO_ARTICLES + str(pmid) + '.xml', 'r')
+        file = open(definitions.PATH_TO_ARTICLES + str(pmid) + '.xml', 'r', encoding='utf-8')
         article_content = file.read()
         file.close()
 

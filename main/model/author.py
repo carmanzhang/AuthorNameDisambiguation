@@ -25,3 +25,6 @@ class Author:
 
     def set_forename(self, forename):
         self.forename = forename
+
+    def get_fullname(self):
+        return self.lastname + ', ' + self.forename + ' (' + self.initials + ')'

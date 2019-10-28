@@ -13,7 +13,7 @@ def load_entities(pmid, dir_path=PATH_TO_ENTITIES):
     """Loads the .entities file for a given article pmid. Returns the entities as a list."""
 
     full_path = dir_path + str(pmid) + '.entities'
-    file = open(full_path)
+    file = open(full_path, encoding='utf-8')
 
     entities = list()
 
@@ -35,7 +35,7 @@ def load_jdst(pmid, dir_path=PATH_TO_JDST):
     jds, sts = list(), list()
 
     if os.path.isfile(jds_path):
-        file = open(jds_path, 'r')
+        file = open(jds_path, 'r', encoding='utf-8')
         for line in file:
             if line is not '\n':
                 line = line[:-1]
@@ -43,7 +43,7 @@ def load_jdst(pmid, dir_path=PATH_TO_JDST):
         file.close()
 
     if os.path.isfile(sts_path):
-        file = open(sts_path, 'r')
+        file = open(sts_path, 'r', encoding='utf-8')
         for line in file:
             if line is not '\n':
                 line = line[:-1]
@@ -67,14 +67,14 @@ def load_locs_orgs(pmid, dir_path=PATH_TO_LOC_ORG):
     loc_infos, org_infos = list(), list()
 
     if os.path.isfile(loc_path):
-        file = open(loc_path, 'r')
+        file = open(loc_path, 'r', encoding='utf-8')
         for line in file:
             if line is not '\n':
                 line = line[:-1]
                 loc_infos.append(line)
 
     if os.path.isfile(org_path):
-        file = open(org_path)
+        file = open(org_path, encoding='utf-8')
         for line in file:
             if line is not '\n':
                 line = line[:-1]

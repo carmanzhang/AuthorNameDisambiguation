@@ -373,7 +373,7 @@ def download_fictious_pmc(outputdir):
                                pointers=fictious_pmcids,
                                pointer_type='id',
                                export='xml')
-    with open(fictious_pmcids) as f:
+    with open(fictious_pmcids, encoding='utf-8') as f:
         ids = [i.strip() for i in f]
     try:
         run_with_arguments(arguments)

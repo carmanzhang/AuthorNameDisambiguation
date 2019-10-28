@@ -17,7 +17,7 @@ def _get_all_articles():
         if filename.endswith('.xml'):
             pmid = filename[:-4]
 
-            file = open(definitions.PATH_TO_ARTICLES + filename, 'r')
+            file = open(definitions.PATH_TO_ARTICLES + filename, 'r', encoding='utf-8')
             content = file.read()
             file.close()
 

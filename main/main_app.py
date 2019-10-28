@@ -268,7 +268,6 @@ def main(training_set_path="./../dataset/1500_pairs_train.csv", testing_set_path
                                                 dataset=training_set,
                                                 ds_ln1_col=1, ds_fn1_col=2,
                                                 ds_ln2_col=5, ds_fn2_col=6))
-
         # Loading second article and setting infos
         article2 = article_loader.load_article(pmid_right)
 
@@ -283,12 +282,19 @@ def main(training_set_path="./../dataset/1500_pairs_train.csv", testing_set_path
                                                 dataset=training_set,
                                                 ds_ln1_col=1, ds_fn1_col=2,
                                                 ds_ln2_col=5, ds_fn2_col=6))
-
         # Creating the pair
         article_pair = ArticlePair(article1, article2)
 
         # Putting the pair's vector in the training set
-        x_train.append(article_pair.scores())
+        pair_scores = article_pair.scores()
+
+        # print(article_pair.feature_names())
+        # print(article_pair.binary_scores())
+        print(pair_scores)
+        article1.print_detail_info()
+        article2.print_detail_info()
+
+        x_train.append(pair_scores)
         if 'NO' in training_labels[i]:
             y_train.append(0)
         else:

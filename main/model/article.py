@@ -28,6 +28,22 @@ class Article:
         self.vector = vector
         self.raw_text = raw_text
 
+    def print_detail_info(self):
+        print('PMID:' + str(self.PMID) + '\n' +
+              'ambiguity:' + str(self.ambiguity) + '\n' +
+              'main_author:' + str(self.main_author.get_fullname()) + '\n' +
+              'authors:' + str('|'.join([a.get_fullname() for a in self.authors])) + '\n' +
+              'language:' + str(self.language) + '\n' +
+              'e_mail:' + str(self.e_mail) + '\n' +
+              'date:' + str(self.date) + '\n' +
+              'loc_list:' + str(self.loc_list) + '\n' +
+              'org_list:' + str(self.org_list) + '\n' +
+              'mesh_terms:' + str(self.mesh_terms) + '\n' +
+              'entities:' + str(self.entities) + '\n' +
+              'jds:' + str(self.jds) + '\n' +
+              'sts:' + str(self.sts) + '\n' +
+              'vector:' + str(', '.join([str(v)[:6] for v in self.vector])) + '\n' +
+              'raw_text: ' + str(self.raw_text) + '\n')
 
     # Getters and Setters
     def get_PMID(self):
