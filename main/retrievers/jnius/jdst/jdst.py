@@ -21,7 +21,8 @@ Vector = autoclass('java.util.Vector')
 
 
 # Instatiating Jdi and Sti
-path_to_configuration = definitions.ROOT_DIR + "/main/data/Config/tc.properties"
+# path_to_configuration = definitions.ROOT_DIR + "/main/data/Config/tc.properties"
+path_to_configuration = '//vmware-host/Shared Folders/2T/tc2011/data/Config/tc.properties'
 
 jdi = JdiApi(path_to_configuration)
 sti = StiApi(Configuration(path_to_configuration, False))

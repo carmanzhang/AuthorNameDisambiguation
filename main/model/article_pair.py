@@ -32,6 +32,16 @@ class ArticlePair:
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
+        # return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
+        #         self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
+        #         self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
+        #         self.get_org_type_descr_score(), self.get_entities_score(), self.get_ambiguity_score(),
+        #         self.get_lnlength_score(), self.get_vector_score()]
+        # return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
+        #         self.get_mesh_score(), self.get_location_score(),
+        #         self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
+        #         self.get_org_type_descr_score(), self.get_ambiguity_score(),
+        #         self.get_lnlength_score(), self.get_vector_score()]
         return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
                 self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
                 self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),

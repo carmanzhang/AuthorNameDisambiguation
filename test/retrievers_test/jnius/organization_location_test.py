@@ -19,6 +19,7 @@ class OrganizationLocationTest(unittest.TestCase):
 
         loc = organization_location.find_location(soup)
         org = organization_location.find_organization(soup)
+        print(loc, org)
 
         self.assertEqual(['Hefei', 'PR', 'China'], loc)
         self.assertEqual(['Anhui', 'Medical', 'University'], org)

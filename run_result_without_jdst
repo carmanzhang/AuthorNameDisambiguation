@@ -1,0 +1,58 @@
+C:\Users\Carman\Anaconda3\python.exe C:/Users/Carman/Desktop/作者消歧/repos/AuthorNameDisambiguation/main/main_app.py
+C:\Users\Carman\Anaconda3\lib\site-packages\sklearn\ensemble\weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+C:\Users\Carman\Anaconda3\lib\site-packages\h5py\__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+
+KNN accuracy: 71%
+[[0.2556391  0.19799499]
+ [0.09022556 0.45614035]]
+For N = 5
+
+RandomForest accuracy: 76%
+[[0.30576441 0.14786967]
+ [0.08521303 0.46115288]]
+With 50 trees
+
+KNN accuracy: 70%
+[[0.24561404 0.20802005]
+ [0.08521303 0.46115288]]
+For N = 7
+
+RandomForest accuracy: 76%
+[[0.28822055 0.16541353]
+ [0.06766917 0.47869674]]
+With 70 trees
+
+KNN accuracy: 71%
+[[0.24310777 0.21052632]
+ [0.07518797 0.47117794]]
+For N = 9
+
+RandomForest accuracy: 76%
+[[0.29323308 0.160401  ]
+ [0.07017544 0.47619048]]
+With 90 trees
+
+CART accuracy: 75%
+[[0.29323308 0.160401  ]
+ [0.0802005  0.46616541]]
+Traceback (most recent call last):
+  File "C:/Users/Carman/Desktop/作者消歧/repos/AuthorNameDisambiguation/main/main_app.py", line 385, in <module>
+    main("./../dataset/1500_pairs_train.csv", "./../dataset/400_pairs_test.csv")
+  File "C:/Users/Carman/Desktop/作者消歧/repos/AuthorNameDisambiguation/main/main_app.py", line 360, in main
+    test_classifiers(x_train_norm, y_train, x_test_norm, y_test)
+  File "C:/Users/Carman/Desktop/作者消歧/repos/AuthorNameDisambiguation/main/main_app.py", line 173, in test_classifiers
+    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+  File "C:/Users/Carman/Desktop/作者消歧/repos/AuthorNameDisambiguation/main/main_app.py", line 142, in run_classifier
+    classifier.fit(x_train, y_train)
+  File "C:\Users\Carman\Desktop\作者消歧\repos\AuthorNameDisambiguation\main\classifiers\svm.py", line 15, in fit
+    self._clf.fit(x_train, y_train)
+  File "C:\Users\Carman\Anaconda3\lib\site-packages\sklearn\svm\base.py", line 187, in fit
+    fit(X, y, sample_weight, solver_type, kernel, random_seed=seed)
+  File "C:\Users\Carman\Anaconda3\lib\site-packages\sklearn\svm\base.py", line 254, in _dense_fit
+    max_iter=self.max_iter, random_seed=random_seed)
+  File "sklearn\svm\libsvm.pyx", line 58, in sklearn.svm.libsvm.fit
+TypeError: must be real number, not str
+
+Process finished with exit code 1

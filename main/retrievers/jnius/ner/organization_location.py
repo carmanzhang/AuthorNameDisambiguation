@@ -3,6 +3,10 @@ import definitions
 import bs4
 
 os.environ['CLASSPATH'] = definitions.ROOT_DIR + "/main/retrievers/jnius/ner/AuthoringNER.jar"
+#
+# jnius_config.set_classpath(definitions.ROOT_DIR + r"\main\retrievers\jnius\ner\AuthoringNER.jar",
+#                            definitions.ROOT_DIR + r"\main\retrievers\jnius\ner\lib")
+# print(jnius_config.expand_classpath())
 
 from jnius import autoclass
 
@@ -33,7 +37,7 @@ def identify_ner(text):
 
             word = label.word()
             category = label.get(AnswerAnnotation)
-
+            print(word, category)
             if not category == 'O':
                 if category not in retval.keys():
                     retval[category] = [word]
